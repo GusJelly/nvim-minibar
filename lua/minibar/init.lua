@@ -37,7 +37,6 @@ end
 ---@return string
 local function createStatuslineString(modeName, branch)
     local statusline = "[" .. modeName .. "] " .. branch .. " %= [%f]%m %= %h%r [%l,%c] [%P %L]"
-
     return statusline
 end
 
@@ -49,7 +48,6 @@ local function changeStatusline()
     vim.api.nvim_create_autocmd("ModeChanged", {
         callback = function()
             local modeName = getCurrentMode()
-
             vim.opt_local.statusline = createStatuslineString(modeName, branch)
         end
     })
@@ -58,7 +56,6 @@ local function changeStatusline()
     vim.api.nvim_create_autocmd("BufEnter", {
         callback = function()
             local modeName = getCurrentMode()
-
             vim.opt_local.statusline = createStatuslineString(modeName, branch)
         end
     })
