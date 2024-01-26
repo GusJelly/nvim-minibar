@@ -23,7 +23,7 @@ local function getCurrentMode()
         modeName = "Command"
     elseif mode == 't' then
         modeName = "Terminal"
-    elseif mode == 'CTRL-V' then
+    elseif mode == '\22' then
         modeName = "Visual Block"
     else
         modeName = vim.fn.mode()
