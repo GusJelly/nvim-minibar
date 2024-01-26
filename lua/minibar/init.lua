@@ -7,7 +7,8 @@ M = {}
 -- Gets the current mode when ran
 ---@return string
 local function getCurrentMode()
-    local mode = vim.api.nvim_eval("mode()")
+    local mode = vim.fn.mode()
+    vim.fn.mode()
     local modeName = ""
 
     if mode == 'n' then
@@ -22,7 +23,7 @@ local function getCurrentMode()
         modeName = "Command"
     elseif mode == 't' then
         modeName = "Terminal"
-    elseif mode == 'CTRL-V' then
+    elseif mode == 'CTRL-Vs' then
         modeName = "Visual Line"
     else
         modeName = vim.api.nvim_eval('mode()')
