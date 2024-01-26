@@ -26,7 +26,8 @@ local function getCurrentMode()
     elseif mode == 'CTRL-Vs' then
         modeName = "Visual Line"
     else
-        modeName = vim.api.nvim_eval('mode()')
+        modeName = vim.fn.mode()
+        print(vim.fn.mode())
     end
 
     return modeName
