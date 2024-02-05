@@ -37,7 +37,7 @@ end
 ---@param branch string
 ---@return string
 local function createStatuslineString(modeName, branch)
-    local statusline = "[" .. modeName .. "] " .. branch .. " %= [%f]%m %= %h%r [%l,%c] [%P %L]"
+    local statusline = "[" .. modeName .. "] " .. branch .. " %= [%f]%m %= %h%r [%P %L]"
     return statusline
 end
 
